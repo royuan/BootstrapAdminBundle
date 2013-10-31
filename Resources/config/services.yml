@@ -1,0 +1,7 @@
+parameters:
+#    royuan_bootstrap_admin.example.class: Royuan\BootstrapAdminBundle\Example
+
+services:
+#    royuan_bootstrap_admin.example:
+#        class: %royuan_bootstrap_admin.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
