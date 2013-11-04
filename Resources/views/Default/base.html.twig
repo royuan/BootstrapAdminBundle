@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<title>{% block title %}{% endblock %}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	{% block meta %}
+	{% endblock %}
+
+	{% block stylesheets %}
+		{% stylesheets
+			'@RoyuanBootstrapAdminBundle/Resources/public/bootstrap-admin/bootstrap/css/*'
+			'@RoyuanBootstrapAdminBundle/Resources/public/bootstrap-admin/assets/styles.css' %}
+			<link rel="stylesheet" type="text/css" href="{{ asset_url }}">
+		{% endstylesheets %}
+	{% endblock %}
+
+</head>
+<body>
+
+	{% block header %}
+	{% endblock %}
+
+	{% block content %}
+
+		<div class="container-fluid">
+			<div class="row-fluid">
+
+				<div class="span3">
+					{% block sidebar %}
+					{% endblock %}
+				</div>
+
+				<div class="span9">
+					{% block mainarea %}
+					{% endblock %}
+				</div>
+			</div>
+		</div>
+
+	{% endblock %}
+
+	{% block footer %}
+	{% endblock %}
+
+	{% block javascripts %}
+		{% javascripts
+			'@RoyuanBootstrapAdminBundle/Resources/public/bootstrap-admin/vendors/jquery-1.9.1.min.js'
+			'@RoyuanBootstrapAdminBundle/Resources/public/bootstrap-admin/bootstrap/js/*'
+			'@RoyuanBootstrapAdminBundle/Resources/public/bootstrap-admin/assets/scripts.js' %}
+			<script type="text/javascript" src="{{ asset_url }}"></script>
+		{% endjavascripts %}
+	{% endblock %}
+
+</body>
+</html>
