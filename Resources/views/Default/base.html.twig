@@ -9,8 +9,9 @@
 
 	{% block stylesheets %}
 		{% stylesheets
-			'@RoyuanBootstrapAdminBundle/Resources/public/bootstrap-admin/bootstrap/css/*'
-			'@RoyuanBootstrapAdminBundle/Resources/public/bootstrap-admin/assets/styles.css' %}
+			'bundles/royuanbootstrapadmin/bootstrap-admin/bootstrap/css/bootstrap.css'
+			'bundles/royuanbootstrapadmin/bootstrap-admin/bootstrap/css/bootstrap-responsive.css'
+			'bundles/royuanbootstrapadmin/bootstrap-admin/assets/styles.css' filter='cssrewrite' %}
 			<link rel="stylesheet" type="text/css" href="{{ asset_url }}">
 		{% endstylesheets %}
 	{% endblock %}
@@ -26,12 +27,12 @@
 		<div class="container-fluid">
 			<div class="row-fluid">
 
-				<div class="span3">
+				<div class="span3" id="sidebar">
 					{% block sidebar %}
 					{% endblock %}
 				</div>
 
-				<div class="span9">
+				<div class="span9" id="content">
 					{% block mainarea %}
 					{% endblock %}
 				</div>
@@ -45,9 +46,9 @@
 
 	{% block javascripts %}
 		{% javascripts
-			'@RoyuanBootstrapAdminBundle/Resources/public/bootstrap-admin/vendors/jquery-1.9.1.min.js'
-			'@RoyuanBootstrapAdminBundle/Resources/public/bootstrap-admin/bootstrap/js/*'
-			'@RoyuanBootstrapAdminBundle/Resources/public/bootstrap-admin/assets/scripts.js' %}
+			'bundles/royuanbootstrapadmin/bootstrap-admin/vendors/jquery-1.9.1.min.js'
+			'bundles/royuanbootstrapadmin/bootstrap-admin/bootstrap/js/*'
+			'bundles/royuanbootstrapadmin/bootstrap-admin/assets/scripts.js' %}
 			<script type="text/javascript" src="{{ asset_url }}"></script>
 		{% endjavascripts %}
 	{% endblock %}
